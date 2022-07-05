@@ -28,13 +28,15 @@ sum = function (a: number, b: number): number {
   return a + b;
 };
 
+// 인덱싱 패턴
 interface StringArray {
   [index: number]: string;
 }
 
 let arr: StringArray = ["1", "2", "3"];
-// arr[0] = 10;
+arr[0] = "10";
 
+// 딕셔너리 패턴
 interface StringRegexDictionary {
   [key: string]: RegExp;
 }
@@ -43,4 +45,22 @@ let obj: StringRegexDictionary = {
   // sth: /abc/,
   cssFile: /\.css$/,
   jsFile: /\.js$/,
+};
+
+Object.keys(obj).forEach(function (value) {});
+
+// 인터페이스 확장
+interface Person {
+  name: string;
+  age: number;
+}
+
+interface Developer extends Person {
+  language: string;
+}
+
+let captain: Developer = {
+  name: "jmpark",
+  age: 29,
+  language: "TS",
 };
