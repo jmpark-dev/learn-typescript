@@ -7,7 +7,6 @@ let myShoes = Shoes.Nike;
 console.log(myShoes);
 
 // 예제
-
 enum Answer {
   Yes = "Y",
   No = "N",
